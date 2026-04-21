@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { href: '/',        label: 'Home' },
-  { href: '/about',   label: 'About Us' },
-  { href: '/contact', label: 'Contact Us' },
-  { href: '/insights',label: 'Insights' },
+  { href: '/',            label: 'Home' },
+  { href: '/about',       label: 'About Us' },
+  { href: '/contact',     label: 'Contact Us' },
+  { href: '/insights',    label: 'Insights' },
+  { href: '/domain',      label: 'Domain' },
+  { href: '/milestones',  label: 'Milestones' },
 ];
 
 export default function Header() {
