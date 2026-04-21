@@ -1,107 +1,97 @@
-<h1 align="center">
-  🦐 AquaNext — AI-Powered Shrimp Farm Management System
-</h1>
+# AquaNext — AI-Powered Shrimp Farm Management System
 
-<p align="center">
-  <b>Smart aquaculture at scale — powered by AI, built for the future of shrimp farming.</b>
-</p>
+**An intelligent, full-stack web platform for modern aquaculture operations.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-5.9-blue?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/TailwindCSS-v4-38bdf8?style=for-the-badge&logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Framer_Motion-latest-e91e8c?style=for-the-badge&logo=framer" />
-  <img src="https://img.shields.io/badge/Cloudinary-integrated-3448c5?style=for-the-badge&logo=cloudinary" />
-</p>
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=flat-square&logo=tailwindcss)
+![License](https://img.shields.io/badge/License-Dual_(Academic_%2F_Commercial)-lightgrey?style=flat-square)
 
 ---
 
-## 📌 Overview
+## Overview
 
-**AquaNext** is an intelligent, full-stack web platform designed to transform traditional shrimp farming into a data-driven, AI-assisted operation. It combines real-time environmental monitoring, predictive disease detection, smart feeding optimization, and an intelligent AI assistant — all within a modern, responsive web interface.
+AquaNext is a production-grade web platform that transforms conventional shrimp farming into a data-driven, AI-assisted operation. The system integrates real-time environmental monitoring, predictive disease detection, intelligent feeding optimization, and a conversational AI assistant — delivered through a modern, responsive web interface.
 
-This platform serves a **dual purpose**:
-- 🎓 **Academic Research** — Developed as a supervised research project (ID: `25-26J-385`), exploring the intersection of AI, IoT, and aquaculture.
-- 💼 **Commercial Deployment** — Built with production-grade architecture suitable for real-world shrimp farm operations and SaaS productization.
+This platform is developed for a dual purpose:
+
+- **Academic Research** — A supervised university research project (Research ID: `25-26J-385`) investigating the application of artificial intelligence and IoT technologies in aquaculture.
+- **Commercial Deployment** — Architected for real-world shrimp farm operations and scalable SaaS productization.
 
 ---
 
-## ✨ Features
+## Key Features
 
-| Feature | Description |
+| Module | Description |
 |---|---|
-| 💧 **Water Quality Monitoring** | Real-time dashboards tracking pH, temperature, salinity, dissolved oxygen & ammonia |
-| 🦠 **Disease Detection** | AI-powered early warning system to detect and classify shrimp diseases |
-| 🍽️ **Feeding Optimization** | Smart feeding schedules driven by environmental and growth data |
-| 🤖 **AI Assistant** | Conversational AI for farm management advice and decision support |
-| 📊 **Insights & Analytics** | Data-driven farm performance reports with interactive Recharts visualizations |
-| 📬 **Newsletter & Contact** | Email integration via Nodemailer for subscriber management and enquiries |
-| 🎬 **Live Demo Module** | Interactive in-app demo for prospective users and stakeholders |
-| 🎓 **Research Portal** | Academic sections covering domain, milestones, methodology, and literature |
+| Water Quality Monitoring | Real-time dashboards tracking pH, temperature, salinity, dissolved oxygen, and ammonia levels with interactive chart visualizations |
+| Disease Detection | AI-powered early warning system for the identification and classification of shrimp diseases |
+| Feeding Optimization | Data-driven feeding schedules generated from environmental and biological growth parameters |
+| AI Farm Assistant | Conversational AI interface providing farm management guidance and operational decision support |
+| Insights & Analytics | Performance reporting and trend analysis with interactive Recharts-based data visualizations |
+| Contact & Newsletter | Email-integrated contact and subscriber management system powered by Nodemailer |
+| Live Demo Module | In-app interactive demonstration environment for prospective users and stakeholders |
+| Research Portal | Academic sections covering research domain, project milestones, methodology, and literature survey |
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
 ### Frontend
-- **Framework:** [Next.js 15](https://nextjs.org/) (App Router) + [React 19](https://react.dev/)
+- **Framework:** Next.js 15 (App Router), React 19
 - **Language:** TypeScript 5.9
-- **Styling:** Tailwind CSS v4, MUI (Material UI v7)
-- **Animations:** Framer Motion
+- **Styling:** Tailwind CSS v4, Material UI v7
+- **Animation:** Framer Motion
+- **Data Visualization:** Recharts
 - **Icons:** Lucide React, React Icons
-- **Charts:** Recharts
 
-### Backend & Services
-- **API Routes:** Next.js App Router API (serverless)
-- **Email:** Nodemailer
-- **Media Management:** Cloudinary (`next-cloudinary`)
+### Backend & Integrations
+- **API Layer:** Next.js Serverless API Routes
+- **Email Service:** Nodemailer
+- **Media Management:** Cloudinary via `next-cloudinary`
 
 ### Infrastructure
-- **Deployment Target:** Vercel / Custom Server
-- **Environment Config:** `.env` based secure configuration
+- **Deployment:** Vercel / Custom Node.js Server
+- **Configuration:** Environment variable-based secure configuration
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
+
 - Node.js >= 18
-- npm / yarn / pnpm
+- npm, yarn, or pnpm
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/your-org/AquaNext-AI-ShrimpFarm-Web-25-26J-385.git
-
-# Navigate into the project
 cd AquaNext-AI-ShrimpFarm-Web-25-26J-385
-
-# Install dependencies
 npm install
 ```
 
-### Environment Setup
+### Environment Configuration
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the project root with the following variables:
 
 ```env
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-EMAIL_USER=your_email@gmail.com
+EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
 ```
 
-### Run Development Server
+### Running the Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-### Build for Production
+### Production Build
 
 ```bash
 npm run build
@@ -110,24 +100,24 @@ npm start
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AquaNext-AI-ShrimpFarm-Web-25-26J-385/
 ├── app/
-│   ├── page.tsx                  # Landing page
-│   ├── layout.tsx                # Root layout
-│   ├── about/                    # About the project
-│   ├── ai-assistant/             # AI Farm Assistant
-│   ├── contact/                  # Contact form
-│   ├── demo/                     # Live demo module
-│   ├── disease-detection/        # Disease detection module
-│   ├── domain/                   # Research domain page
-│   ├── feeding/                  # Feeding optimization
-│   ├── insights/                 # Analytics & insights
-│   ├── milestones/               # Research milestones
-│   ├── waterqualitymonitoring/   # Water quality dashboard
-│   └── api/                      # Serverless API routes
+│   ├── page.tsx                    # Main landing page
+│   ├── layout.tsx                  # Root layout and metadata
+│   ├── about/                      # Project and team overview
+│   ├── ai-assistant/               # AI-powered farm assistant
+│   ├── contact/                    # Contact and enquiry form
+│   ├── demo/                       # Live interactive demo
+│   ├── disease-detection/          # Disease detection module
+│   ├── domain/                     # Research domain documentation
+│   ├── feeding/                    # Feeding optimization module
+│   ├── insights/                   # Analytics and reporting
+│   ├── milestones/                 # Research project milestones
+│   ├── waterqualitymonitoring/     # Water quality dashboard
+│   └── api/                        # Serverless API route handlers
 ├── components/
 │   ├── Header.tsx
 │   ├── Footer.tsx
@@ -135,45 +125,56 @@ AquaNext-AI-ShrimpFarm-Web-25-26J-385/
 │   ├── ai-assistant/
 │   ├── feeding/
 │   └── waterquality/
-├── public/                        # Static assets
+├── public/                          # Static assets
 └── next.config.ts
 ```
 
 ---
 
-## 🎓 Academic Information
+## Academic Information
 
-- **Research Project ID:** `25-26J-385`
-- **Research Areas:** Artificial Intelligence, Aquaculture, IoT, Precision Agriculture
-- **Domain:** Smart Farming / Blue Economy
-- **Research Paper:** Available upon request — contact [deranindu@gmail.com](mailto:deranindu@gmail.com)
+| Field | Details |
+|---|---|
+| Research Project ID | 25-26J-385 |
+| Research Domain | Artificial Intelligence, Aquaculture, IoT, Precision Agriculture |
+| Focus Area | Smart Farming / Blue Economy |
+| Research Paper | Available upon request |
+
+To request access to the research paper, contact: [deranindu@gmail.com](mailto:deranindu@gmail.com)
 
 ---
 
-## 💼 Commercial Use
+## Commercial Information
 
-AquaNext is designed with commercial scalability in mind:
-- Multi-farm dashboard support
+AquaNext is engineered with commercial scalability as a core principle:
+
+- Multi-farm and multi-tenant dashboard support
 - Modular AI component architecture
 - SaaS-ready deployment via Vercel
-- Secure API design with environment-based configuration
+- Secure, environment-based API configuration
+- Production-grade codebase following Next.js best practices
 
-For commercial licensing or partnership enquiries, contact [deranindu@gmail.com](mailto:deranindu@gmail.com).
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome for the open portions of this project. Please open an issue first to discuss proposed changes.
+For licensing inquiries, partnerships, or commercial deployment consultations, contact: [deranindu@gmail.com](mailto:deranindu@gmail.com)
 
 ---
 
-## 📄 License
+## Contributing
 
-This project is dual-licensed:
-- **Academic Use:** Free for research and educational purposes with attribution.
-- **Commercial Use:** Contact the team for licensing terms.
+Contributions to the open portions of this project are welcome. Please open an issue to discuss any proposed changes before submitting a pull request.
 
 ---
 
-<p align="center">Built with ❤️ by the AquaNext Team — Sri Lanka 🇱🇰</p>
+## License
+
+This project operates under a dual licensing model:
+
+- **Academic Use** — Free for research and educational purposes with proper attribution.
+- **Commercial Use** — A separate commercial license is required. Contact the team for terms.
+
+---
+
+## Contact
+
+**AquaNext Research & Development Team**
+Sri Lanka
+[deranindu@gmail.com](mailto:deranindu@gmail.com)
