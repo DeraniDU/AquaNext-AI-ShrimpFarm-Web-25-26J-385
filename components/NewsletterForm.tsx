@@ -2,6 +2,19 @@
 
 import { useState } from 'react';
 
+const newsletterEndpoint = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT;
+
+async function readResponsePayload(response: Response) {
+  const contentType = response.headers.get('content-type') ?? '';
+
+  if (contentType.includes('application/json')) {
+    return response.json();
+  }
+
+  const text = await response.text();
+  return text ? { message: text } : {};
+}
+
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -14,9 +27,14 @@ export default function NewsletterForm() {
     setStatus('loading');
     setMessage('');
 
+    if (!newsletterEndpoint) {
+      setStatus('error');
+      setMessage('Newsletter signup is not configured for this deployment yet.');
+      return;
+    }
+
     try {
-      // POST to the Next.js API route
-      const res = await fetch('/api/subscribe', {
+      const res = await fetch(newsletterEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,14 +42,14 @@ export default function NewsletterForm() {
         body: JSON.stringify({ email }),
       });
 
-      const data = await res.json();
+      const data = await readResponsePayload(res);
 
       if (!res.ok) {
         throw new Error(data.error || 'Failed to subscribe');
       }
 
       setStatus('success');
-      setMessage('Welcome aboard! Check your inbox for the welcome email.');
+      setMessage(data.message || 'Welcome aboard! Check your inbox for the welcome email.');
       setEmail('');
     } catch (err: any) {
       console.error('Subscription error:', err);

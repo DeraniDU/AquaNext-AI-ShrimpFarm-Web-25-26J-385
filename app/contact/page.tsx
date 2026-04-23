@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -108,8 +109,8 @@ export default function ContactPage() {
               We are available to discuss collaboration opportunities and answer questions about our automated shrimp pond monitoring system.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href="mailto:deranindu@gmail.com"
+              <Link
+                href="/contact/message/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all text-sm"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -117,7 +118,7 @@ export default function ContactPage() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 Send Us a Message
-              </a>
+              </Link>
             </div>
             <p className="text-xs text-slate-400 mt-5">📍 SLIIT, Malabe Campus • Sri Lanka</p>
           </div>
